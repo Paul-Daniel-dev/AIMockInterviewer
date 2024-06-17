@@ -13,7 +13,7 @@ const StartInterview = ({ params }) => {
   const [interviewData, setInterviewData] = useState(null);
   const [mockInterviewQuestion, setMockInterviewQuestion] = useState(null);
   const [activeQuestionIndex, setActiveQuestionIndex] = useState(0);
-
+  const [loading, setLoading] = useState(false);
   useEffect(() => {
     GetInterviewDetails();
   }, []);
@@ -29,10 +29,15 @@ const StartInterview = ({ params }) => {
       console.log(jsonMockResp);
       setMockInterviewQuestion(jsonMockResp);
       setInterviewData(result[0]);
+      setLoading(false);
     } catch (error) {
       console.error("Failed to fetch interview details:", error);
+      setLoading(false);
     }
   };
+  if (loading) {
+    return <div>Loading...</div>; // Show loading indicator
+  }
 
   return (
     <div>
