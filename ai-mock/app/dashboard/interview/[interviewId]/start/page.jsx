@@ -1,9 +1,9 @@
-"use client";
+"use client"
 
+import React, { useEffect, useState } from "react";
 import { db } from "@/utils/db";
 import { MockInterview } from "@/utils/schema";
 import { eq } from "drizzle-orm";
-import React, { useEffect, useState } from "react";
 import QuestionsSection from "./_components/QuestionsSection";
 import RecordAnswerSection from "./_components/RecordAnswerSection";
 import { Button } from "@/components/ui/button";
@@ -13,10 +13,18 @@ const StartInterview = ({ params }) => {
   const [interviewData, setInterviewData] = useState(null);
   const [mockInterviewQuestion, setMockInterviewQuestion] = useState(null);
   const [activeQuestionIndex, setActiveQuestionIndex] = useState(0);
-  const [loading, setLoading] = useState(true); // Add a loading state
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     GetInterviewDetails();
+
+    return () => {
+      // Cleanup function to reset state
+      setInterviewData(null);
+      setMockInterviewQuestion(null);
+      setActiveQuestionIndex(0);
+      setLoading(true);
+    };
   }, []);
 
   const GetInterviewDetails = async () => {
@@ -38,16 +46,16 @@ const StartInterview = ({ params }) => {
     } catch (error) {
       console.error("Failed to fetch interview details:", error);
     } finally {
-      setLoading(false); // Set loading to false after data is fetched or an error occurs
+      setLoading(false);
     }
   };
 
   if (loading) {
-    return <div>Loading...</div>; // Show loading indicator
+    return <div>Loading...</div>;
   }
 
   if (!mockInterviewQuestion || !mockInterviewQuestion.questions) {
-    return <div>No questions available.</div>; // Show no questions available if data is not properly loaded
+    return <div>No questions available.</div>;
   }
 
   return (
@@ -56,7 +64,7 @@ const StartInterview = ({ params }) => {
         <QuestionsSection
           mockInterviewQuestion={mockInterviewQuestion}
           activeQuestionIndex={activeQuestionIndex}
-          setActiveQuestionIndex={setActiveQuestionIndex} // Pass the setter function
+          setActiveQuestionIndex={setActiveQuestionIndex}
         />
         <RecordAnswerSection
           mockInterviewQuestion={mockInterviewQuestion}
