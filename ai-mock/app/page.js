@@ -27,7 +27,7 @@ export default function Home() {
         <div className="w-6/12 pt-10 pb-10">
           <h1 className="text-lg text-justify">
             {" "}
-            – your ultimate companion in software programming interview
+            Your ultimate companion in software programming interview
             preparation! Our advanced AI-driven tool offers realistic and
             comprehensive mock interviews tailored to your specific programming
             languages, frameworks, and job roles. By simulating real technical
