@@ -18,7 +18,7 @@ const Interview = ({ params }) => {
 
   useEffect(() => {
     if (interviewData) {
-      console.log(interviewData); // This will log the updated interviewData after it's set
+      console.log(interviewData);
     }
   }, [interviewData]);
 

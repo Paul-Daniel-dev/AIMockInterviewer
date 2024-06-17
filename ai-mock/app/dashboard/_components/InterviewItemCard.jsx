@@ -14,7 +14,7 @@ function InterviewItemCard({interview}) {
         router.push('/dashboard/interview/'+interview?.mockId+'/feedback')
     }
     if (!interview) {
-        return <div>Loading...</div>; // Handle the loading state
+        return <div>Loading...</div>; 
       }
   return (
     <div className='border shadow-sm rounded-lg p-3'>
