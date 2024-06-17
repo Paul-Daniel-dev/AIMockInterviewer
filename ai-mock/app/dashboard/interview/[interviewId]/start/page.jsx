@@ -69,7 +69,7 @@ const StartInterview = ({ params }) => {
           <Button onClick={() => setActiveQuestionIndex(activeQuestionIndex + 1)}>Next Question</Button>
         )}
         {mockInterviewQuestion.questions && activeQuestionIndex === mockInterviewQuestion.questions.length - 1 && (
-          <Link href={'/feedback'}>
+          <Link href={"/dashboard/interview/"+interviewData?.mockId+"/feedback"}>
             <Button>End Interview</Button>
           </Link>
         )}
