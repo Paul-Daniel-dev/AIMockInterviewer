@@ -55,7 +55,15 @@ const StartInterview = ({ params }) => {
   }
 
   if (!mockInterviewQuestion || !mockInterviewQuestion.questions) {
-    return <div>No questions available.</div>;
+    return (
+      <>
+    <div>No questions available.Click here to go reload page and try again. This happens when a test was not completed.</div>
+    <Link href={'https://ai-mock-interviewer-f445.vercel.app'}>
+        <Button>Here</Button>
+        </Link>
+    </>
+    )
+    
   }
 
   return (
