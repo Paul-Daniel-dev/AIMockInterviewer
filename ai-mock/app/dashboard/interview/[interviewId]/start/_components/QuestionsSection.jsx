@@ -43,7 +43,7 @@ function QuestionsSection({ mockInterviewQuestion, activeQuestionIndex }) {
         </>
       ) : (
         <>
-        <div>No questions available. Click this button to return to the homescreen and retake the test again. </div>
+        <div>No questions available.!!!Click this button to return to the homescreen and retake the test again. </div>
         <Link href={'https://ai-mock-interviewer-f445.vercel.app'}>
         <Button>Here</Button>
         </Link>
