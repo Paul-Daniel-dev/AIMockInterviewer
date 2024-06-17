@@ -48,7 +48,7 @@ function QuestionsSection({ mockInterviewQuestion, activeQuestionIndex }) {
           <strong>Note:</strong>
         </h2>
         <h2 className="text-white text-sm my-2">
-          Click on Record Answer when you are ready to answer the question. Make sure to speak clearly into your mic. At the end of the interview we will give you feedback along with the correct answer for each question and your answer so you can compare it.
+        Please wait until you get a popup that your response has been saved before you continue to the next question. Click on Record Answer when you are ready to answer the question. Make sure to speak clearly into your mic. At the end of the interview we will give you feedback along with the correct answer for each question and your answer so you can compare it.
         </h2>
       </div>
     </div>
