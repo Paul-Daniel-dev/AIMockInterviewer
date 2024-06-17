@@ -31,7 +31,7 @@ const RecordAnswerSection = ({mockInterviewQuestion, activeQuestionIndex,intervi
 
   useEffect(()=>{
     results.map((result)=>{
-        setUserAnswer(prevAns=>prevAns+result?.transcript)
+        setUserAnswer(result?.transcript)
         
     })
   },[results])

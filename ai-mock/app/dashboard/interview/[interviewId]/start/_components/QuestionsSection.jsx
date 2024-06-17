@@ -12,7 +12,7 @@ function QuestionsSection({ mockInterviewQuestion, activeQuestionIndex }) {
   }
 
   if (!mockInterviewQuestion) {
-    return <div>Loading...</div>; // Handle the loading state
+    return <div>Loading...</div>; 
   }
 
   return (
@@ -43,7 +43,7 @@ function QuestionsSection({ mockInterviewQuestion, activeQuestionIndex }) {
         <Lightbulb />
         <strong>Note:</strong>
       </h2>
-      <h2 className="text-white text-sm my-2">Click on Record Answer when you are ready to answer the question. At the end of the interview we will will give you feedback along with the correct answer for each of the quesition and you answer so you can compare it.
+      <h2 className="text-white text-sm my-2">Click on Record Answer when you are ready to answer the question.Make sure to speak clearly into your mic. At the end of the interview we will will give you feedback along with the correct answer for each of the quesition and you answer so you can compare it.
       </h2>
       </div>
     </div>
