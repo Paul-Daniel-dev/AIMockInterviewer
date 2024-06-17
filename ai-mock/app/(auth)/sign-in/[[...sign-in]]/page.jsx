@@ -16,7 +16,7 @@ export default function Page() {
             Email: aimockinterviewer@gmail.com
           </h1>
           <h1 className="text-black p-2 font-bold text-xl">
-            Password: zxcvbnm12345@
+            Password: zcbmnvx12345@
           </h1>
         </div>
         
