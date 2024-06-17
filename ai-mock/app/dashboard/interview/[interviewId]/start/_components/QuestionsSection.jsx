@@ -42,12 +42,10 @@ function QuestionsSection({ mockInterviewQuestion, activeQuestionIndex }) {
           <Volume2 className="cursor-pointer" onClick={() => textToSpeech(currentQuestion.question)} />
         </>
       ) : (
-        <>
-        <div>No questions available.!!!Click this button to return to the homescreen and retake the test again. </div>
-        <Link href={'https://ai-mock-interviewer-f445.vercel.app'}>
-        <Button>Here</Button>
-        </Link>
-        </>
+        
+        <div>No questions available </div>
+        
+        
       )}
       <div className="border rounded-lg p-5 bg-blue-600 mt-20">
         <h2 className="flex gap-2 items-center text-white">
